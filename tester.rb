@@ -5,6 +5,13 @@ nb_tests = ARGV[1].to_i
 push_swap_path = "..".chomp('/')
 sizes_hash = {}
 
+#handling signals
+["QUIT", "INT"].each { |signal|
+	Signal.trap(signal) do
+		abort "\n"
+	end
+}
+
 if File.file?("#{push_swap_path}/push_swap") == false then
 	abort("invalid push_swap path")
 end
