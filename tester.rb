@@ -17,6 +17,6 @@ nb_tests.times do
 	result = (1..n).to_a.shuffle.join(" ")
 	instructions = `./#{push_swap_path}/push_swap #{result}`
 	instructions_size = instructions.delete(" ").split("\n").size
-	checker_status = `./#{push_swap_path}/push_swap #{result} | ./#{push_swap_path}/checker_Mac #{result}`
+	checker_status = `./#{push_swap_path}/push_swap #{result} | ./checker_Mac #{result}`
 	puts checker_status.chomp + " => " + instructions_size.to_s
 end
