@@ -14,6 +14,9 @@ git clone https://github.com/mzarhou/push_swap_tester
 - Give `./tester.rb` execute permission
 
 ```sh
+cd push_swap_tester
+```
+```sh
 chmod +x ./tester.rb
 ```
 
