@@ -36,4 +36,4 @@ puts "avg => " + avg.to_s
 
 puts "\n\nFind worst case numbers in log file\n\n"
 
-File.open("log", "w"){|f| f.write sizes_hash[max]}
+File.write("log", sizes_hash[max])
