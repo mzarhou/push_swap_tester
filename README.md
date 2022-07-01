@@ -9,22 +9,11 @@ For `mac`, not tested for `linux`
 
 ```sh
 git clone https://github.com/mzarhou/push_swap_tester
-```
 
-- Give `./tester.rb` execute permission
-
-```sh
 cd push_swap_tester
 ```
-```sh
-chmod +x ./tester.rb
-```
 
-- Give checker_Mac execute permission
-
-```sh
-chmod +x ./checker_Mac
-```
+ - Usage exemples
 
 ```
 Usage: ./tester.rb [Stack Size] [Number of tests]
