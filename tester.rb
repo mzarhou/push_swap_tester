@@ -17,7 +17,7 @@ if File.file?("#{push_swap_path}/push_swap") == false then
 	abort("invalid push_swap path")
 end
 if n <= 0 || nb_tests <= 0 then
-    abort("invalid arguments")
+    abort("Usage: ./tester.rb [Stack Size] [Number of tests]")
 end
 
 puts "test #{n} values --- #{nb_tests} #{nb_tests == 1 ? 'test' : 'tests'}\n\n"
