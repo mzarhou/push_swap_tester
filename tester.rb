@@ -30,20 +30,20 @@ nb_tests.times do
 	sizes_hash[instructions_size] = random_numbers
 	checker_status = (`./#{push_swap_path}/push_swap #{random_numbers} | ./checker_Mac #{random_numbers}`).chomp
 	check_arr << checker_status if checker_status == "OK"
-	puts ((checker_status == "OK") ? "✅ " : "🟥 ") + checker_status + " => " + instructions_size.to_s
+	puts ((checker_status == "OK") ? "✅ " : "🅾️  ") + checker_status + " => " + instructions_size.to_s
 end
 
 # list of instructions sizes of each test
 sizes_list = sizes_hash.keys
 max = sizes_list.max
-avg = sizes_list.sum / sizes_list.size
+avg = sizes_list.reduce(:+) / sizes_list.size
 
 puts "\n\nBenchmarks:"
 puts "min => " + sizes_list.min.to_s
 puts "max => " + max.to_s
 puts "avg => " + avg.to_s
 puts
-puts "You'v got " + check_arr.size.to_s + " ✅ and " + (nb_tests - check_arr.size).to_s + " 🟥 out of " + nb_tests.to_s + " tests\n"
+puts "You'v got " + check_arr.size.to_s + " ✅ and " + (nb_tests - check_arr.size).to_s + " 🅾️  out of " + nb_tests.to_s + " tests\n"
 puts "\n\nFind worst case numbers in log file\n\n"
 
 File.write("log", sizes_hash[max])
