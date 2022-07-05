@@ -7,7 +7,7 @@ sizes_hash = {}
 check_arr = []
 
 #handling signals
-["QUIT", "INT"].each { |signal|
+["QUIT", "INT", "SIGTSTP"].each { |signal|
 	Signal.trap(signal) do
 		abort "\n"
 	end
